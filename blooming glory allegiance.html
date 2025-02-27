@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Glory Allegiances</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #33444b;
+
+	ul {
+    	    list-style-type: none;
+    	    padding-left: 20px;
+	}
+
+	li {
+    	    margin-bottom: 10px;
+    	    line-height: 1.6
+	}
+
+        }
+        /* Section 1 */
+        #section1 {
+    	height:1615px;
+            background-color: #7590d8
+        }
+        /* Section 2 */
+        #section2 {
+    	height: 1700px;
+            background-color: #a27fe1
+        }
+        /* Section 3 */
+        #section3 {
+    	height: 1700px;
+            background-color: #81dda3
+        }
+        /* Section 4 */
+        #section4 {
+    	height: 1660px;
+            background-color: #84bce1
+        }
+
+        .section {
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            color: #222;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .popup-trigger {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            width: 300px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            overflow-y: hidden;
+
+<script>
+    function openPopup(title, text, imgSrc) {
+        let popup = document.getElementById("popup");
+        document.getElementById("popup-title").innerText = title;
+
+        // Use the text with <br> tags to ensure line breaks are applied
+        document.getElementById("popup-text").innerHTML = text;
+        document.getElementById("popup-img").src = imgSrc; // Set the imAge for the popup
+        popup.style.display = "block";  // Makes the popup visible
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none"; // Hides the popup
+    }
+</script>
+        }
+        .popup-header {
+            cursor: move;
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px 10px 0 0;
+        }
+        .popup-content {
+            text-align: left;
+            padding: 10px;
+        }
+        .popup img {
+            display: block;
+            margin: 0 auto;
+            width: 40%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .popup-text-box {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            word-wrap: break-word;
+        }
+        .close-btn {
+            cursor: pointer;
+            color: red;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .popup-text-line {
+            margin: 10px 0;
+            padding: 5px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .popup-text-box p {
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
+    </style>
+    <script>
+        function openPopup(title, text, imgSrc) {
+            let popup = document.getElementById("popup");
+            document.getElementById("popup-title").innerText = title;
+
+            let lines = text.split("\n");  
+            let textContent = '';
+
+            lines.forEach(line => {
+                textContent += `<div class="popup-text-line">${line}</div>`;
+            });
+
+            document.getElementById("popup-text").innerHTML = textContent;
+            document.getElementById("popup-img").src = imgSrc;
+            popup.style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function makeDraggable() {
+            let popup = document.getElementById("popup");
+            let header = document.getElementById("popup-header");
+            let offsetX, offsetY, isDown = false;
+            header.addEventListener("mousedown", function(e) {
+                isDown = true;
+                offsetX = e.clientX - popup.offsetLeft;
+                offsetY = e.clientY - popup.offsetTop;
+            });
+            document.addEventListener("mouseup", function() { isDown = false; });
+            document.addEventListener("mousemove", function(e) {
+                if (isDown) {
+                    popup.style.left = `${e.clientX - offsetX}px`;
+                    popup.style.top = `${e.clientY - offsetY}px`;
+                }
+            });
+        }
+
+        window.onload = makeDraggable;
+    </script>
+</head>
+<body>
+    <h1>Blooming Glory Allegiances</h1>
+    
+    <!-- Section 1 -->
+    <div class="section" id="section1">
+        <h2>Camp of Hawk</h2>
+        <!-- Subsection 1.1 to 1.5 -->
+        <div>
+        <h3>Guide</h3>
+        <ul>
+            <li><span class="popup-trigger" onclick="openPopup('Velvetgale', 'Age - 110 moons\nPronouns - she/her\nKin: <br>Sibling/s - Rubyspots<br>Mate/s - Wrensong<br>Kit/s - Foxstrike, Rustleaf, Honeycloud', 'Velvetgale.png')"><span style="color: #176628;=">Velvetgale</span></span> - soft furred, red colorpoint molly with blue eyes</li>
+        </ul>
+    </div>
+        <div>
+            <h3>Advisor</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Batflight', 'Age - 145 moons\nPronouns - he/him\nKin: <br>Kit/s - Shadowfang, Minnowcreek, Blackmask', 'Batflight.png')"<span style="color: #172b66;=">Batflight</span> - black tom with hazel eyes</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Medic/s</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Honeycloud', 'Age - 50 moons\nPronouns - she/her\nKin: <br>Parent/s - Velvetgale and Wrensong<br>Sibling/s - Foxstrike, Rustleaf', 'Honeycloud.png')">Honeycloud</span> - soft-furred yellow and white spotted tabby molly with green eyes</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Warriors</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Wrensong', 'Position - Gatherer, Moor Runner\nAge - 112 moons\nPronouns - he/him\nKin: <br>Mate/s - Velvetgale<br>Kit/s - Foxstrike, Rustleaf, Honeycloud', 'Wrensong.png')"<span style="color: #172b66;="><u>Wrensong</span></span> - light brown mackerel tabby tom with green eyes </li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Whitestripe', 'Age - 110 moons\nPronouns - he/him\nKin: <br>Mate/s - Emberheart<br>Kit/s - Sorrelheart, Hornettail, Beetleface', 'Whitestripe.png')"><span style="color: #176628;=">Whitestripe</span></span> - grey and white tom tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rubyspots', 'Age - 110 moons\nPronouns - she/her\nKin: <br>Sibling/s - Velvetgale\nEducation: <br>Apprentice - Stonegust', 'Rubyspots.png')"><span style="color: #176628;=">Rubyspots</span></span> - white molly with red patches and yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Shadowfang', 'Age - 90 moons\nPronouns - she/her\nKin: <br>Parent/s - Batflight<br>Sibling/s - /Minnowshine, /Blackmask', 'Shadowfang.png')"<span style="color: #172b66;=">Shadowfang</span></span> - black fluffy molly with teal eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Iceshine', 'Age - 75 moons\nPronouns - he/him\nKin: <br>Mate/s - Poppyflower<br>Kit/s - Flame\nPast affiliations - Loner', 'Iceshine.png')"<span style="color: #172b66;=">Iceshine</span> - slick, white tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rustleaf', 'Position - Guard\nAge - 50 moons\nPronouns - he/him\nKin: <br>Parent/s - Velvetgale and Wrensong<br>Sibling/s - Foxstrike, Honeycloud<br>Mate/s - Heronbird', 'Rustleaf.png')">Rustleaf</span> - red mackerel tabby tom with blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Duckslip', 'Age - 50 moons\nPronouns - he/him\nKin: <br>Parent/s - Rabbitpelt(+) and Snifflewhisper<br>Sibling/s - Sprucebark, Heronbird<br>Mate/s - Ocelotpounce\nEducation: <br>Apprentice - Daisygust', 'Duckslip.png')"><span style="color: #176628;=">Duckslip</span></span> - white and brown tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Sprucebark', 'Age - 50 moons\nPronouns - he/him\nKin: <br>Parent/s - Rabbitpelt(+) and Snifflewhisper<br>Sibling/s - Duckslip, Heronbird<br>Former mate/s - Hornettail<br>Kit/s - Lilac, Vole', 'Sprucebark.png')"><span style="color: #176628;=">Sprucebark</span></span> - brown mackerel tabby tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Heronbird', 'Age - 50 moons\nPronouns - he/him\nKin: <br>Parent/s - Rabbitpelt(+) and Snifflewhisper<br>Sibling/s - Duckslip, Sprucebark<br>Mate/s - Rustleaf\nEducation: <br>Apprentice - Mistgust', 'Heronbird.png')"><span style="color: #172b66;=">Heronbird</span></span> - white and grey molly with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Ocelotpounce', 'Position - Gatherer, Moor Runner\nAge - 45 moons\nPronouns - she/her\nKin: <br>Sibling/s - Cheetahrun<br>Mate/s - Duckslip\nPast affiliations - Loner', 'Ocelotpounce.png')"<span style="color: #172b66;="><u>Ocelotpounce</span></span> - soft-furred cream spotted tabby molly with green eyes </li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Cheetahrun', 'Age - 45 moons\nPronouns - he/him\nKin: <br>Sibling/s - Ocelotpounce<br>Mate/s - Minnowcreek<br>Kit/s - Mistgust, Stonegust, Daisygust\nPast affiliations - Loner', 'Cheetahrun.png')"<span style="color: #172b66;=">Cheetahrun</span></span> - cream tom with black markings and amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Minnowcreek', 'Age - 38 moons\nPronouns - she/her\nKin: <br>Parent/s - Batflight<br>Sibling/s - Blackmask, /Shadowfang<br>Mate/s - Cheetahrun<br>Kit/s - Mistgust, Stonegust, Daisygust', 'Minnowcreek.png')"><span style="color: #176628;=">Minnowcreek</span></span> - fluffy silver and white classic tabby molly with blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Blackmask', 'Position - Gatherer, Forest Hunter\nAge - 38 moons\nPronouns - he/him\nKin: <br>Parent/s - Batflight<br>Sibling/s - Minnowcreek, /Shadowfang<br>Mate/s - Sorrelheart<br>Adopted kit/s - Lilac, Vole', 'Blackmask.png')"><span style="color: #176628;="><u>Blackmask</span></span> - white tom with black markings and blue eyes </li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Sorrelheart', 'Age - 36 moons\nPronouns - she/her\nKin: <br>Parent/s - Emberheart, Whitestripe<br>Sibling/s - Hornettail, /Beetleface<br>Mate/s - Blackmask<br>Adopted kit/s - Lilac, Vole', 'Sorrelheart.png')"><span style="color: #176628;=">Sorrelheart</span></span> - fluffy calico molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Hornettail', 'Age - 36 moons\nPronouns - she/her\nKin: <br>Parent/s - Emberheart, Whitestripe<br>Sibling/s - Sorrelheart, /Beetleface<br>Former mate/s - Sprucebark<br>Kit/s - Lilac, Vole', 'Hornettail.png')"><span style="color: #176628;=">Hornettail</span></span> - tortoiseshell molly with a very short tail and yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Muffin', 'Position - Gatherer, Forest Hunter\nAge - 30 moons\nPronouns - he/him\nKin: <br>-\nPast affiliations - Loner', 'Muffin.png')"><span style="color: #176628;="><u>Muffin</span></span> - fluffy white and brown tom with one yellow and one blue eye </li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Deerleap', 'Age - 17 moons\nPronouns - she/her\nKin: <br>-\nPast affiliations - Loner', 'Deerleap.png')"<span style="color: #172b66;=">Deerleap</span></span> - brown molly with amber eyes and a crooked tail tip</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Beetleface', 'Age - 15 moons\nPronouns - he/him\nKin: <br>Parent/s - Emberheart, Whitestripe<br>Sibling/s - /Sorrelheart, /Hornettail', 'Beetleface.png')"<span style="color: #172b66;=">Beetleface</span></span> - light grey tom with black markings and hazel eyes</li>
+<br>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Trainees</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Mistgust', 'Age - 7 moons\nPronouns - she/her\nKin: <br>Parent/s - Cheetahrun, Minnowcreek<br>Sibling/s - Stonegust, Daisygust\nEducation: <br>Mentor - Heronbird', 'Mistgust.png')"<span style="color: #172b66;=">Mistgust</span></span> - silver and white classic tabby molly with amber eyes </li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Stonegust', 'Age - 7 moons\nPronouns - he/him\nKin: <br>Parent/s - Cheetahrun, Minnowcreek<br>Sibling/s - Mistgust, Daisygust\nEducation: <br>Mentor - Rubyspots', 'Stonegust.png')"><span style="color: #176628;=">Stonegust</span></span> - grey and white classic tabby tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Daisygust', 'Age - 7 moons\nPronouns - she/her\nKin: <br>Parent/s - Cheetahrun, Minnowcreek<br>Sibling/s - Mistgust, Stonegust\nEducation: <br>Mentor - Duckslip', 'Daisygust.png')"><span style="color: #176628;=">Daisygust</span></span> - fluffy pale calico molly with blue eyes </li>
+<br>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Queens and kits</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Poppyflower', 'Age - 70 moons\nPronouns - she/her\nKin: <br>Mate/s - Iceshine<br>Kit/s - Flame\nPast affiliations - Kittypet, Loner', 'Poppyflower.png')">Poppyflower</span> - fluffy russet molly with green eyes</li>
+
+		<li style="padding-left: 40px;"> 
+		<span class="popup-trigger" onclick="openPopup('Flame', 'Age - 2 moons\nPronouns - he/him\nKin: <br>Parent/s - Iceshine, Poppyflower', 'Flame.png')">Flame</span> - russet tom with yellow eyes</li>
+<br>
+		<li style="padding-left: 15px;"> 
+		<span class="popup-trigger" onclick="openPopup('Lilac', 'Age - 1 moons\nPronouns - he/him\nKin: <br>Parent/s - Sprucebark, Hornettail<br>Adopted parent/s - Blackmask, Sorrelheart<br>Sibling/s - Vole', 'Lilac.png')">Lilac</span> - grey-black tom with green eyes</li>
+		<li style="padding-left: 15px;"> 
+		<span class="popup-trigger" onclick="openPopup('Vole', 'Age - 1 moons\nPronouns - she/her\nKin: <br>Parent/s - Sprucebark, Hornettail<br>Adopted parent/s - Blackmask, Sorrelheart<br>Sibling/s - Lilac', 'Vole.png')">Vole</span> - brown molly with yellow eyes</li>
+<br>
+
+
+            </ul>
+        </div>    
+        <div>        
+            <h3>Elders</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Snifflewhisper', 'Age - 150 moons\nPronouns - he/him\nKin: <br>Mate/s - Rabbitpelt(+)<br>Kit/s - Sprucebark, Duckslip, Heronbird', 'Snifflewhisper.png')"<span style="color: #172b66;=">Snifflewhisper</span></span> - sickly white and grey ticked tabby tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Emberheart', 'Age - 140 moons\nPronouns - she/her\nKin: <br>Mate/s - Whitestripe<br>Kit/s - Sorrelheart, Hornettail, Beetleface', 'Emberheart.png')"><span style="color: #176628;=">Emberheart</span></span> - fluffy tortoiseshell molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Foxstrike', 'Former position - Guard\nAge - 50 moons\nPronouns - she/her\nKin: <br>Parent/s - Velvetgale and Wrensong<br>Sibling/s - Rustleaf, Honeycloud\nEducation: <br>Former mentor - Whitestripe', 'Foxstrike.png')"><span style="color: #176628;=">Foxstrike</span></span> - ginger and white molly with a scar across her face, blind green eyes and a useless leg</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="section2">
+        <h2>Camp of Haze</h2>
+        <!-- Subsection 2.1 to 2.5 -->
+        <div>
+            <h3>Warden</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Lindenshade', 'Age - 85 moons\nPronouns - he/him\nKin: <br>Parent/s - Boulderfoot<br>Former mate/s - Shinegaze<br>Kit/s - Rain, Golden, Pine\nEducation: <br>Apprentice - Cedar', 'Lindenshade.png')"<span style="color: #48117d;=">Lindenshade</span></span> - large grey and brown mackerel tabby tom with green eyes</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Regent</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Frosttail', 'Age - 35 moons\nPronouns - she/her\nKin: <br>Parent/s - Russetwind and Stingclaw<br>Sibling/s - Peonytail\nEducation: <br>Former apprentice - Gracklefern', 'Frosttail.png')"<span style="color: #c9b42a;=">Frosttail</span></span> - red molly with a white tail and icy blue eyes</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Medic/s</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Mintleaf', 'Age - 70 moons\nPronouns - she/her\nKin: <br>Parent/s - Thrushwing, Acornfur(+)<br>Sibling/s - Lilypetal, Sparrowear<br>Mate/s - Magpiefeather\nEducation: <br>Former apprentice - Bearheart', 'Mintleaf.png')"<span style="color: #c9b42a;=">Mintleaf</span></span> - brown molly with dark brown markings and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Bearheart', 'Age - 25 moons\nPronouns - he/him\nKin: <br>Parent/s - Raccoontail and Lilypetal<br>Sibling/s - Fern(+)<br>Half-sibling/s - Rock, Cedar\nEducation: <br>Former mentor - Mintleaf', 'Bearheart.png')"<span style="color: #48117d;=">Bearheart</span></span> - large and fluffy brown tom with yellow eyes</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Warriors</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Boulderfoot', 'Age - 110 moons\nPronouns - he/him\nKin: <br>Kit/s - Lindenshade\nEducation: <br>Apprentice - Pine', 'Boulderfoot.png')"<span style="color: #48117d;=">Boulderfoot</span></span> - grey classic tabby tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Thrushwing', 'Age - 100 moons\nPronouns - she/her\nKin: <br>Sibling/s - Owlwhisper(+)<br>Mate/s - Acornfur(+)<br>Kit/s - Lilypetal, Mintleaf, Sparrowear\nEducation: <br>Apprentice - Echo', 'Thrushwing.png')"<span style="color: #48117d;=">Thrushwing</span></span> - dark brown spotted tabby she-cat with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Russetfrost', 'Age - 90 moons\nPronouns - she/her\nKin: <br>Parent/s - Silverstorm and Blazefur(+)<br>Sibling/s - Orangeleg, /Thorndapple<br>Mate/s - Stingclaw<br>Kit/s - Frosttail, Peonytail\nEducation: <br>Apprentice - Golden', 'Russetfrost.png')"<span style="color: #48117d;=">Russetfrost</span></span> - red molly with light blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Orangeleg', 'Age - 90 moons\nPronouns - he/him\nKin: <br>Parent/s - Silverstorm and Blazefur(+)<br>Sibling/s - Russetfrost, /Thorndapple<br>Mate/s - Skybreeze<br>Former mate/s - Owlwhisper(+)<br>Kit/s - Dahlia\nEducation: <br>Apprentice - Rain', 'Orangeleg.png')"<span style="color: #c9b42a;=">Orangeleg</span></span> - white tom with dark ginger tabby spots and blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Daffodildawn', 'Age - 85 moons\nPronouns - she/her\nKin: <br>Kit/s - Dawnblaze, Dandelionleaf, Dovelight', 'Daffodildawn.png')"<span style="color: #c9b42a;=">Daffodildawn</span></span> - short white molly with ginger markings, green eyes and a scarred back leg </li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Raccoontail', 'Position - Guard (Bearheart)\nAge - 75 moons\nPronouns - he/him\nKin: <br>Sibling/s - Skybreeze<br>Former mate/s - Lilypetal, Thorndapple<br>Kit/s - Bearheart, Fern(+), Rock, Cedar', 'Raccoontail.png')">Raccoontail</span> - large dark grey tom with a white tail with black stripes and amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Lilypetal', 'Age - 70 moons\nPronouns - she/her\nKin: <br>Parent/s - Thrushwing and Acornfur(+)<br>Sibling/s - Mintleaf, Sparrowear<br>Former mate/s - Raccoontail<br>Mate/s - Silkstripe<br>Kit/s - Bearheart, Fern(+)', 'Lilypetal.png')"<span style="color: #c9b42a;=">Lilypetal</span></span> - soft-furred cream molly with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Sparrowear', 'Age - 70 moons\nPronouns - he/him\nKin: <br>Parent/s - Thrushwing and Acornfur(+)<br>Sibling/s - Mintleaf, Lilypetal<br>Mate/s - Peonytail\nEducation: <br>Apprentice - Whisper', 'Sparrowear.png')"<span style="color: #48117d;=">Sparrowear</span></span> - brown classic tabby tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Stingclaw', 'Age - 65 moons\nPronouns - he/him\nKin: <br>Parent/s - Nettlefang(+) and Sapphirehaze<br>Sibling/s - Silkstripe, Shinegaze<br>Mate/s - Russetfrost<br>Kit/s - Frosttail, Peonytail\nEducation: <br>Apprentice - Rock', 'Stingclaw.png')"<span style="color: #c9b42a;=">Stingclaw</span></span> - golden and white tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Silkstripe', 'Age - 65 moons\nPronouns - he/him\nKin: <br>Parent/s - Nettlefang(+)and Sapphirehaze<br>Sibling/s - Stingclaw, Shinegaze<br>Mate/s - Lilypetal', 'Silkstripe.png')"<span style="color: #c9b42a;=">Silkstripe</span></span> - grey and white tom with blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Shinegaze', 'Age - 65 moons\nPronouns - she/her\nKin: <br>Parent/s - Nettlefang(+)and Sapphirehaze<br>Sibling/s - Stingclaw, Silkstripe<br>Former mate/s - Lindenshade<br>Kit/s - Rain, Golden, Pine', 'Shinegaze.png')"<span style="color: #c9b42a;=">Shinegaze</span></span> - light golden and white molly with very light blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Magpiefeather', 'Position - Guard (Mintleaf)\nAge - 60 moons\nPronouns - he/him\nKin: <br>Mate/s - Mintleaf<br>Kit/s - Jaywillow, Gracklefern<br>Adopted kit/s - Whisper, Echo\nPast affiliations - Loner', 'Magpiefeather.png')">Magpiefeather</span> - long furred black and white tom with blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Thorndapple', 'Age - 45 moons\nPronouns - she/her\nKin: <br>Parent/s - Silverstorm and Blazefur(+)<br>Sibling/s - /Russetfrost, /Orangeleg<br>Former mate/s - Raccoontail<br>Kit/s - Rock, Cedar\nEducation: <br>Former apprentice - Jaywillow', 'Thorndapple.png')"<span style="color: #48117d;=">Thorndapple</span></span> - tortoiseshell mackerel tabby molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Peonytail', 'Age - 35 moons\nPronouns - she/her\nKin: <br>Parent/s - Russetfrost and Stingclaw<br>Sibling/s - Frosttail<br>Mate/s - Sparrowear', 'Peonytail.png')"<span style="color: #c9b42a;=">Peonytail</span></span> - fluffy white molly with a red tail and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Dawnblaze', 'Age - 24 moons\nPronouns - she/her\nKin: <br>Parent/s - Daffodildawn<br>Sibling/s - Dandelionleaf, Dovelight', 'Dawnblaze.png')"<span style="color: #c9b42a;=">Dawnblaze</span></span> - small white and ginger mackerel tabby molly with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Dandelionleaf', 'Age - 24 moons\nPronouns - he/him\nKin: <br> Parent/s - Daffodildawn<br>Sibling/s - Dawnblaze, Dovelight', 'Dandelionleaf.png')"<span style="color: #c9b42a;=">Dandelionleaf</span></span> - small white classic tabby tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Dovelight', 'Age - 24 moons\nPronouns - she/her\nKin: <br>Parent/s - Daffodildawn<br>Sibling/s - Dawnblaze, Dandelionleaf', 'Dovelight.png')"<span style="color: #c9b42a;=">Dovelight</span></span> - small and white fluffy red van molly with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Jaywillow', 'Age - 19 moons\nPronouns - she/her\nKin: <br> Parent/s - Magpiefeather<br>Sibling/s - Gracklefern<br>Adopted sibling/s - Whisper, Echo\nEducation: <br>Former mentor - Thorndapple\nPast affiliations - Loner', 'Jaywillow.png')"<span style="color: #48117d;=">Jaywillow</span></span> - grey molly with teal eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Gracklefern', 'Age - 19 moons\nPronouns - he/him\nKin: <br>Parent/s - Magpiefeather<br>Sibling/s - Jaywillow<br>Adopted sibling/s - Whisper, Echo\nEducation: <br>Former mentor - Frosttail\nPast affiliations - Loner', 'Gracklefern.png')"<span style="color: #48117d;=">Gracklefern</span></span> - grey tom with hazel eyes</li>
+<br>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Trainees</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Whisper', 'Age - 10 moons\nPronouns - she/her\nKin: <br>Parent/s - Song(+)<br>Adopted parent/s - Magpiefeather<br>Sibling/s - Echo<br>Adopted sibling/s - Jaywillow, Gracklefern\nEducation: <br>Mentor - Sparrowear', 'Whisper.png')"<span style="color: #48117d;=">Whisper</span></span> - black and white fluffy molly with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Echo', 'Age - 10 moons\nPronouns - he/him\nKin: <br>Parent/s - Song(+)<br>Adopted parent/s - Magpiefeather<br>Sibling/s - Whisper<br>Adopted sibling/s - Jaywillow, Gracklefern\nEducation: <br>Mentor - Thrushwing', 'Echo.png')"<span style="color: #48117d;=">Echo</span></span> - silver and white fluffy tom with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rain', 'Age - 7 moons\nPronouns - he/him\nKin: <br>Parent/s - Lindenshade and Shinegaze<br>Sibling/s - Golden, Pine\nEducation: <br>Mentor - Orangeleg', 'Rain.png')"<span style="color: #c9b42a;=">Rain</span></span> - grey classic tabby tom with blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Golden', 'Age - 7 moons\nPronouns - he/him\nKin: <br>Parent/s - Lindenshade and Shinegaze<br>Sibling/s - Rain, Pine\nEducation: <br>Mentor - Russetfrost', 'Golden.png')"<span style="color: #48117d;=">Golden</span></span> - golden and white mackerel tabby tom with green eyes </li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Pine', 'Age - 7 moons\nPronouns - she/her\nKin: <br>Parent/s - Lindenshade and Shinegaze<br>Sibling/s - Rain, Golden\nEducation: <br>Mentor - Boulderfoot', 'Pine.png')"<span style="color: #48117d;=">Pine</span></span> - brown ticked tabby molly with very light blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rock', 'Age - 7 moons\nPronouns - she/her\nKin: <br>Parent/s - Raccoontal and Thorndapple<br>Sibling/s - Pine<br>Half-sibling/s - Bearheart, Fern(+)\nEducation: <br>Mentor - Stingclaw', 'Rock.png')"<span style="color: #c9b42a;=">Rock</span></span> - grey ticked tabby molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Cedar', 'Age - 7 moons\nPronouns - he/him\nKin: <br>Parent/s - Raccoontal and Thorndapple<br>Sibling/s - Rock<br>Half-sibling/s - Bearheart, Fern(+)\nEducation: <br>Mentor - Lindenshade', 'Cedar.png')"<span style="color: #48117d;=">Cedar</span></span> - grey tom with ginger patches and amber eyes</li>
+<br>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Queens and kits</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Skybreeze', 'Age - 75 moons\nPronouns - she/her\nKin: <br>Sibling/s - Raccoontail<br>Mate/s - Orangeleg<br>Kit/s - Dahlia', 'Skybreeze.png')"<span style="color: #c9b42a;=">Skybreeze</span></span> - large light grey molly with amber eyes</li>
+
+		<li style="padding-left: 40px;"> 
+		<span class="popup-trigger" onclick="openPopup('Dahlia', 'Age - 2 moons\nPronouns - she/her\nKin: <br>Parent/s - Orangeleg and Skybreeze', 'Dahlia.png')">Dahlia</span></span> - white molly with grey mackerel tabby spots and blue eyes</li>
+<br>
+
+            </ul>
+        </div>
+        <div>      
+            <h3>Elders</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Silverstorm', 'Age - 160 moons\nPronouns - he/him\nKin: <br>Mate/s - Blazefur(+)<br>Kit/s - Russetfrost, Orangeleg, Thorndapple', 'Silverstorm.png')"<span style="color: #48117d;=">Silverstorm</span></span> - white tom with a silver classic tabby overcoat and amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Sapphirehaze', 'Age - 150 moons\nPronouns - she/her\nKin: <br>Parent/s - Silkthroat(+)<br>Half-sibling/s - Smudge (lost)<br>Mate/s - Nettlefang(+)<br>Kit/s - Stingclaw, Silkstripe, Shinegaze', 'Sapphirehaze.png')"<span style="color: #c9b42a;=">Sapphirehaze</span></span> - fluffy light blue and white molly with blue eyes</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Section 3 -->
+    <div class="section" id="section3">
+        <h2>Camp of Sedge</h2>
+        <!-- Subsection 3.1 to 3.5 -->
+        <div>
+            <h3>Leader</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Mapletide', 'Age - 60 moons\nPronouns - he/him\nKin: <br>Parent/s - Smallflame and Ebonyshade<br>Sibling/s - Darkspots, Burntstripe(+)<br>Mate/s - Beaverfang<br>Kit/s - Beechbrook', 'Mapletide.png')">Mapletide</span> - big, thick pelted tortoiseshell tom with yellow eyes</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Second Voice</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Finchfeather', 'Age - 50 moons\nPronouns - she/her\nKin: <br>Parent/s - Specklepelt(+) and Timberstep (lost)<br>Sibling/s - Patchdusk<br>Mate/s - Burntstripe(+)<br>Kit/s - Forestbrook, Nightbrook\nEducation: <br>Apprentice - Snakebrook', 'Finchfeather.png')">Finchfeather</span> - brown spotted tabby molly with green eyes</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Medic/s</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Patchdusk', 'Age - 50 moons\nPronouns - she/her\nKin: <br>Parent/s - Specklepelt(+) and Timberstep (lost)<br>Sibling/s - Finchfeather\nEducation: <br>Apprentice - Pansybrook<br>Former mentor - Flashbelly', 'Patchdusk.png')">Patchdusk</span> - slick white molly with brown and ginger markings and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Pansybrook', 'Age - 8 moons\nPronouns - he/him\nKin: <br>Parent/s - Powdercloud and Bubblepool<br>Sibling/s - Lavenderbrook\nEducation: <br>Mentor - Patchdusk', 'Pansybrook.png')">Pansybrok</span> - small white tom with a grey mackerel tabby overcoat and blue eyes</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Warriors</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Pebblesplash', 'Age - 135 moons\nPronouns - she/her\nKin: <br>Former mate/s - Rapidstorm<br>Kit/s - Bubblepool, Willowfall', 'Pebblesplash.png')">Pebblesplash</span> - light grey and white molly with ginger markings and blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Smallflame', 'Age - 120 moons\nPronouns - he/him\nKin: <br>Former mate/s - Ebonyshade<br>Kit/s - Burntstripe(+), Darkspots, Mapletide', 'Smallflame.png')">Smallflame</span> - small orange mackerel tabby tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Ebonyshade', 'Position - Ranger\nAge - 100 moons\nPronouns - she/her\nKin: <br>Mate/s - Martenthroat<br>Former mate/s - Smallflame<br>Kit/s - Burntstripe(+), Darkspots, Mapletide', 'Ebonyshade.png')"><u>Ebonyshade</span> - big and thick pelted dark brown molly with black spots and green eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Martenthroat', 'Position - Handler\nAge - 90 moons\nPronouns - he/him\nKin: <br>Mate/s - Ebonyshade', 'Martenthroat.png')"><i>Martenthroat</span> - soft furred light brown and white tom with blue eyes</li></i>
+
+                <li><span class="popup-trigger" onclick="openPopup('Beaverfang', 'Former position - Guard\nAge - 70 moons\nPronouns - she/her\nKin: <br>Sibling/s - Palebriar(+)<br>Mate/s - Mapletide<br>Kit/s - Beechbrook\nEducation: <br>Apprentice - Forestbrook', 'Beaverfang.png')">Beaverfang</span> - bulky brown molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Talonstrike', 'Position - Guard\nAge - 65 moons\nPronouns - she/her\nKin: <br>Mate/s - Sheepfur<br>Kit/s - Snakebrook, Milkbrook\nEducation: <br>Apprentice - Lavenderbrook\nPast affiliations - Rouge', 'Talonstrike.png')">Talonstrike</span> - big ginger mackerel tabby molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Darkspots', 'Position - Ranger\nAge - 60 moons\nPronouns - he/him\nKin: <br>Parent/s - Smallflame and Ebonyshade<br>Sibling/s - Burntstripe(+), Mapletide<br>Mate/s - Swanfeather<br>Kit/s - Otter, Hail, Pearl', 'Darkspots.png')"><u>Darkspots</span> - big and fluffy white tom with dark brown spots and green eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Sheepfur', 'Position - Handler\nAge - 60 moons\nPronouns - he/him\nKin: <br>Mate/s - Talonstrike<br>Kit/s - Snakebrook, Milkbrook\nPast affiliations - Rouge', 'Sheepfur.png')"><i>Sheepfur</span> - small fluffy white tom with hazel eyes</li></i>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rosepatch', 'Age - 45 moons\nPronouns - she/her\nKin: <br>Parent/s - Flashbelly and Bramblepelt(+)<br>Sibling/s - Briarheart<br>Half-siblings - Leafwing, Tulipdusk, Cloverdew\nEducation: <br>Apprentice - Nightbrook', 'Rosepatch.png')">Rosepatch</span> - white molly with a russet overcoat and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Briarheart', 'Position - Ranger\nAge - 45 moons\nPronouns - he/him\nKin: <br>Parent/s - Flashbelly and Bramblepelt(+)<br>Sibling/s - Rosepatch<br>Half-siblings - Leafwing, Tulipdusk, Cloverdew', 'Briarheart.png')"><u>Briarheart</span> - white tom with a dark brown overcoat, a ginger fleck on his nose and green eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Powdercloud', 'Age - 36 moons\nPronouns - he/him\nKin: <br>Parent/s - Eaglebreeze and Claydapple(+)<br>Sibling/s - Swanfeather<br>Mate/s - Bubblepool<br>Kit/s - Lavenderbrook, Pansybrook', 'Powdercloud.png')">Powdercloud</span> - fluffy small gray spotted tabby tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Bubblepool', 'Age - 35 moons\nPronouns - she/her\nKin: <br>Parent/s - Rapidstorm and Pebbelsplash<br>Sibling/s - Willowfall<br>Mate/s - Powdercloud<br>Kit/s - Lavenderbrook, Pansybrook', 'Bubblepool.png')">Bubblepool</span> - small grey molly with white markings and blue eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Willowfall', 'Age - 35 moons\nPronouns - he/him\nKin: <br>Parent/s - Rapidstorm and Pebbelsplash<br>Sibling/s - Bubblepool\nEducation: <br>Apprentice - Milkbrook', 'Willowfall.png')">Willowfall</span> - pale tortoiseshell spotted tabby tom with hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Leafwing', 'Age - 18 moons\nPronouns - he/him\nKin: <br>Parent/s - Bramblepelt(+) and Iriseyes<br>Sibling/s - Tulipdusk, Cloverdew<br>Half-siblings - Rosepatch, Briarheart', 'Leafwing.png')">Leafwing</span> - ginger and white tom with light green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Tulipdusk', 'Age - 18 moons\nPronouns - he/him\nKin: <br>Parent/s - Bramblepelt(+) and Iriseyes<br>Sibling/s - Leafwing, Cloverdew<br>Half-siblings - Rosepatch, Briarheart\nEducation: <br>Apprentice - Beechbrook', 'Tulipdusk.png')">Tulipdusk</span> - dark grey and white classic tabby tom with blue-purple eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Cloverdew', 'Position - Ranger apprentice\nAge - 18 moons\nPronouns - she/her\nKin: <br>Parent/s - Bramblepelt(+) and Iriseyes<br>Sibling/s - Leafwing, Tulipdusk<br>Half-siblings - Rosepatch, Briarheart', 'Cloverdew.png')"><u>Cloverdew</span> - grey and white ticked tabby molly with green eyes</li></u>
+<br>
+            </ul>
+        </div>
+        <div>
+            <h3>Trainees</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Snakebrook', 'Age - 10 moons\nPronouns - he/him\nKin: <br>Parent/s - Talonstrike and Sheepfur<br>Sibling/s - Milkbrook\nEducation: <br>Mentor - Finchfeather', 'Snakebrook.png')">Snakebrook</span> - ginger and white mackerel tabby tom with hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Milkbrook', 'Age - 10 moons\nPronouns - he/him\nKin: <br>Parent/s - Talonstrike and Sheepfur<br>Sibling/s - Snakebrook\nEducation: <br>Mentor - Willowfall', 'Milkbrook.png')">Milkbrook</span> - fluffy white tom with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Forestbrook', 'Age - 9 moons\nPronouns - he/him\nKin: <br>Parent/s - Burntstripe(+) and Finchfeather<br>Sibling/s - Nightbrook\nEducation: <br>Mentor - Beaverfang', 'Forestbrook.png')">Forestbrook</span> - fluffy dark brown colorpoint tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Nightbrook', 'Age - 9 moons\nPronouns - she/her\nKin: <br>Parent/s - Burntstripe(+) and Finchfeather<br>Sibling/s - Forestbrook\nEducation: <br>Mentor - Rosepatch', 'Nightbrook.png')">Nightbrook</span> - black spotted tabby molly with hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Lavenderbrook', 'Position - Guard apprentice\nAge - 8 moons\nPronouns - she/her\nKin: <br>Parent/s - Powdercloud and Bubblepool<br>Sibling/s - Pansybrook\nEducation: <br>Mentor - Talonstrike', 'Lavenderbrook.png')">Lavenderbrook</span> - small grey and white classic tabby molly with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Beechbrook', 'Age - 6 moons\nPronouns - he/him\nKin: <br>Parent/s - Beaverfang and Mapletide\nEducation: <br>Mentor - Tulipdusk', 'Beechbrook.png')">Beechbrook</span> - brown ticked tabby tom with amber eyes</li>
+<br>
+            </ul>
+        </div>
+        <div>
+            <h3>In nursery</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Swanfeather', 'Age - 36 moons\nPronouns - she/her\nKin: <br>Parent/s - Eaglebreeze and Claydapple(+)<br>Sibling/s - Powdercloud<br>Mate/s - Darkspots<br>Kit/s - Otter, Hail, Pearl', 'Swanfeather.png')">Swanfeather</span> - slender white molly with yellow eyes</li>
+
+		<li style="padding-left: 40px;"> 
+		<span class="popup-trigger" onclick="openPopup('Otter', 'Age - 3 moons\nPronouns - she/her\nKin: <br>Parent/s - Darkspots and Swanfeather<br>Sibling/s - Hail, Pearl', 'Otter.png')">Otter</span>  - dark brown and white molly with yellow eyes</li>
+		<li style="padding-left: 40px;"> 
+		<span class="popup-trigger" onclick="openPopup('Hail', 'Age - 3 moons\nPronouns - she/her\nKin: <br>Parent/s - Darkspots and Swanfeather<br>Sibling/s - Otter, Pearl', 'Hail.png')">Hail</span> - light grey ticked tabby molly with green eyes</li>
+		<li style="padding-left: 40px;"> 
+		<span class="popup-trigger" onclick="openPopup('Pearl', 'Age - 3 moons\nPronouns - he/him\nKin: <br>Parent/s - Darkspots and Swanfeather<br>Sibling/s - Otter, Hail', 'Pearl.png')">Pearl</span> - white tom with yellow eyes</li>
+<br>
+
+            </ul>
+        </div>
+        <div>      
+            <h3>Elders</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Eaglebreeze', 'Age - 160 moons\nPronouns - she/her\nKin: <br>Mate/s - Claydapple(+)<br>Kit/s - Swanfeather, Powdercloud', 'Eaglebreeze.png')">Eaglebreeze</span> - grey and white molly with yellow eyes and one blind eye</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Flashbelly', 'Age - 140 moons\nPronouns - she/her\nKin: <br>Mate/s - Iriseyes<br>Former mate/s - Bramblepelt(+)<br>Kit/s - Rosepatch, Briarheart', 'Flashbelly.png')">Flashbelly</span> - white molly with a dark brown overcoat and hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rapidstorm', 'Age - 130 moons\nPronouns - he/him\nKin: <br>Former mate/s - Pebblesplash<br>Kit/s - Bubblepool, Willowfall', 'Rapidstorm.png')">Rapidstorm</span> - grey and white mackerel tabby tom with hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Iriseyes', 'Age - 110 moons\nPronouns - she/her\nKin: <br>Mate/s - Flashbelly<br>Former mate/s - Bramblepelt(+)<br>Kit/s - Leafwing, Tulipdusk, Cloverdew', 'Iriseyes.png')">Iriseyes</span> - fluffy grey and white classic tabby molly with blue-purple eyes</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!-- Section 4 -->
+    <div class="section" id="section4">
+        <h2>Camp of Sun</h2>
+        <!-- Subsection 4.1 to 4.5 -->
+        <div>
+            <h3>Guardian</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Ashsun', 'Age - 35 moons\nPronouns - she/her\nKin: <br>Parent/s - Chubpuddle and Lightningstrike(+)<br>Sibling/s - Rainmuzzle, /Blizzardflame, /Prickle(+)', 'Ashsun.png')"<span style="color: #2290a2;">Ashsun</span></span> - small white molly with grey mackerel tabby spots and yellow eyes</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Deputy</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Rookstrike', 'Age - 90 moons\nPronouns - he/him\nKin: <br>Sibling/s - Badgerslash<br>Mate/s - Lioncloud<br>Kit/s - Beeflight, Antfoot', 'Rookstrike.png')">Rookstrike</span> - black tom with yellow eyes</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Medic/s</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Gingerstep', 'Age - 75 moons\nPronouns - he/him\nKin: <br>Parent/s - Nightwhisker<br>Sibling/s - Flowerstorm, /Lightningstrike, /Goldenshine<br>Mate/s - Gentlewing', 'Gingerstep.png')">Gingerstep</span> - white tom with ginger patches and amber eyes</li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Warriors</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Hawksky', 'Age - 125 moons\nPronouns - he/him\nKin: <br>Sibling/s - Chubpuddle<br>Former mate/s - Oatmuzzle, Littleberry<br>Kit/s - Vinetail, Muddystream, Tiny', 'Hawksky.png')">Hawksky</span> - huge and fluffy grey tom with brown markings and yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Chubpuddle', 'Age - 125 moons\nPronouns - she/her\nKin: <br>Sibling/s - Hawksky<br>Mate/s - Lightningstrike<br>Kit/s - Blizzardflame, Prickle(+), Ashsun, Rainmuzzle', 'Chubpuddle.png')">Chubpuddle</span> - huge and fluffy grey and white mackerel tabby molly with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Littleberry', 'Position - Scout\nAge - 100 moons\nPronouns - she/her\nKin: <br>Sibling/s - /Duskspring<br>Former mate/s - Hawksky<br>Kit/s - Tiny', 'Littleberry.png')"><u>Littleberry</span> - small brown and white molly with green eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Badgerslash', 'Age - 90 moons\nPronouns - she/her\nKin: <br>Sibling/s - Rookstrike<br>Mate/s - Oliveleaf', 'Badgerslash.png')"<span style="color: #2290a2;">Badgerslash</span></span> - white and black molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Oliveleaf', 'Position - Scout\nAge - 90 moons\nPronouns - he/him\nKin: <br>Sibling/s - Outmuzzle(+)<br>Mate/s - Badgerslash', 'Oliveleaf.png')"><u>Oliveleaf</span> - brown mackerel tabby tom with green eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Birchnose', 'Age - 75 moons\nPronouns - she/her\nKin: <br>Parents - Lightcloud and Oakbranch<br>Sibling/s - /Cupressfall, /Aspensnow<br>Mate/s - Duskspring', 'Birchnose.png')"<span style="color: #2290a2;">Birchnose</span></span>  - big and fluffy white molly with brown markings and yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Flowerstorm', 'Position - Guard\nAge - 75 moons\nPronouns - he/him\nKin: <br>Parent/s - Nightwhisper<br>Sibling/s - Gingerstep, /Lightningstrike(+), /Goldenshine<br>Mate/s - Muddystream', 'Flowerstorm.png')">Flowerstorm</span> - long furred white tom with gray markings and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Quietsong', 'Age - 72 moons\nPronouns - she/her\nKin: <br>Sibling/s - Robinsong<br>Mate/s - Softwhisper<br>Kit/s - Briskleap, Rushclaw', 'Quietsong.png')"<span style="color: #2290a2;">Quietsong</span></span> - fluffy white and brown molly with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Robinsong', 'Age - 72 moons\nPronouns - he/him\nKin: <br>Sibling/s - Quietsong<br>Mate/s - Rainmuzzle', 'Robinsong.png')">Robinsong</span> - fluffy brown spotted tabby tom with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Duskspring', 'Age - 70 moons\nPronouns - he/him\nKin: <br>Sibling/s - /Littleberry<br>Mate/s - Birchnose', 'Duskspring.png')">Duskspring</span> - small fawn tom with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Gentlewing', 'Position - Scout\nAge - 65 moons\nPronouns - she/him\nKin: <br>Sibling/s - Mallowpetal<br>Mate/s - Gingerstep', 'Gentlewing.png')"><u>Gentlewing</span> - soft furred white molly with dark grey markings and amber eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Mallowpetal', 'Position - Scout\nAge - 65 moons\nPronouns - he/him\nKin: <br>Sibling/s - Gentlewing', 'Mallowpetal.png')"><u>Mallowpetal</span> - soft furred white tom with dark grey markings and green eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Lioncloud', 'Age - 60 moons\nPronouns - she/her\nKin: <br>Parent/s - Shrewsun(+)<br>Mate/s - Rookstrike<br>Kit/s - Beeflight, Antfoot', 'Lioncloud.png')">Lioncloud</span> - small and fluffy pale ginger and white classic tabby molly with green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Blizzardflame', 'Age - 60 moons\nPronouns - he/him\nKin: <br>Parent/s - Chubpuddle and Lightningstrike(+)<br>Sibling/s - /Ashsun, /Rainmuzzle', 'Blizzardflame.png')"<span style="color: #2290a2;">Blizzardflame</span></span> - big and fluffy white tom with dark ginger paw and ear and amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Softwhisper', 'Position - Scout\nAge - 55 moons\nPronouns - he/him\nKin: <br>Mate/s - Quietsong<br>Kit/s - Briskleap, Rushclaw', 'Softwhisper.png')"><u>Softwhisper</span> - grey ticked tabby tom with amber eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Goldenshine', 'Age - 50 moons\nPronouns - she/her\nKin: <br>Parent/s - Nightwhisper<br>Sibling/s - /Lightningstrike(+), /Gingerstep, /Flowerstorm\nEducation: <br>Former apprentice - Rushclaw', 'Goldenshine.png')">Goldenshine</span> - pale ginger and white spotted tabby molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Vinetail', 'Age - 50 moons\nPronouns - she/her\nKin: <br>Parent/s -Hawksky and Oatmuzzle(+)<br>Sibling/s - Muddystream, /Tiny<br>Mate/s - Cypressfall', 'Vinetail.png')">Vinetail</span> - slick light grey ticked tabby molly with a long tail and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Muddystorm', 'Position - Scout\nAge - 50 moons\nPronouns - she/her\nKin: <br>Parent/s -Hawksky and Oatmuzzle(+)<br>Sibling/s - Vinetail, /Tiny<br>Mate/s - Flowerstorm', 'Muddystream.png')"><u>Muddystream</span> - big and fluffy grey and brown classic tabby molly with a scarred muzzle, broken paw and yellow eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rainmuzzle', 'Age - 35 moons\nPronouns - she/her\nKin: <br>Parent/s - Chubpuddle and Lightningstrike(+)<br>Sibling/s - Ashsun, /Blizzardflame<br>Mate/s - Robinsong', 'Rainmuzzle.png')">Rainmuzzle</span> - fluffy dark grey mackerel tabby molly with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Beeflight', 'Age - 30 moons\nPronouns - she/her\nKin: <br>Parent/s - Rookstrike and Lioncloud<br>Sibling/s - /Antfoot<br>Mate/s - Briskleap', 'Beeflight.png')">Beeflight</span> - fluffy pale ginger spotted tabby molly with dark tabby markings and hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Aspensnow', 'Age - 25 moons\nPronouns - he/him\nKin: <br>Parent/s - Lightcloud and Oakbranch<br>Sibling/s - Cypressfall, /Birchnose', 'Aspensnow.png')"<span style="color: #2290a2;">Aspensnow</span></span> - white classic tabby tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Cypressfall', 'Age - 25 moons\nPronouns - he/him\nKin: <br>Parent/s - Lightcloud and Oakbranch<br>Sibling/s - Aspensnow, /Birchnose<br>Mate/s - Vinetail', 'Cypressfall.png')">Cypressfall</span> - brown mackerel tabby tom with hazel eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Antfoot', 'Age - 20 moons\nPronouns - he/him\nKin: <br>Parent/s - Rookstrike and Lioncloud<br>Sibling/s - /Beeflight', 'Antfoot.png')"<span style="color: #2290a2;">Antfoot</span></span> - white tom with black markings and green eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Briskleap', 'Position - Scout apprentice\nAge -18 moons\nPronouns - he/him\nKin: <br>Parent/s - Quietsong and Softwhisper<br>Sibling/s - Rushclaw<br>Mate/s - Beeflight', 'Briskleap.png')"><u>Briskleap</span> - grey and white mackerel tabby tom with amber eyes</li></u>
+
+                <li><span class="popup-trigger" onclick="openPopup('Rushclaw', 'Age - 18 moons\nPronouns - he/him\nKin: <br>Parent/s - Quietsong and Softwhisper<br>Sibling/s - Briskleap\nEducation: <br>Former mentor - Goldenshine', 'Rushclaw.png')">Rushclaw</span> - brown-russet tom with amber eyes</li>
+<br>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Trainees</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Item1', 'Age - 35\nPronouns - female\njob - scientist\nappearance - neat, professional')"></span>NONE</li>
+
+<br>
+
+            </ul>
+        </div>
+        <div>
+            <h3>Queens and kits</h3>
+            <ul>
+		<li style="padding-left: 15px;"> 
+		<span class="popup-trigger" onclick="openPopup('Tiny', 'Age - 6 moons\nPronouns - she/her\nKin: <br>Parent/s - Hawksky and Littleberry<br>Sibling/s - /Vinetail, /Muddystream', 'Tinygleam.png')">Tiny</span> - small grey and brown molly with green eyes</li>
+
+<br>
+
+            </ul>
+        </div>    
+        <div>        
+            <h3>Elders</h3>
+            <ul>
+                <li><span class="popup-trigger" onclick="openPopup('Nightwhisper', 'Age - 198 moons\nPronouns - he/him\nKin: <br>Kit/s - Lightningstrike(+), Flowerstorm, Gingerstep, Goldenshine', 'Nightwhisper.png')">Nightwhisper</span> - black tom with amber eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Lightcloud', 'Age - 152 moons\nPronouns - he/him\nKin: <br>Mate/s - Oakbranch<br>Kit/s - Birchnose, Aspensnow, Cypressfall', 'Lightcloud.png')"<span style="color: #2290a2;">Lightcloud</span></span> - bulky and fluffy white tom with yellow eyes</li>
+
+                <li><span class="popup-trigger" onclick="openPopup('Oakbranch', 'Age - 152 moons\nPronouns - she/her\nKin: <br>Mate/s - Lightcloud<br>Kit/s - Birchnose, Aspensnow, Cypressfall', 'Oakbranch.png')">Oakbranch</span> - brown mackerel tabby molly with green eyes</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div id="popup" class="popup">
+        <div class="popup-header" id="popup-header">
+            <span id="popup-title">Popup Header</span>
+            <span class="close-btn" onclick="closePopup()">X</span>
+        </div>
+        <div class="popup-content">
+            <img id="popup-img" src="placeholder.jpg" alt="Popup ImAge">
+            <div id="popup-text"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
